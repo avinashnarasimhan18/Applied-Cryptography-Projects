@@ -1,5 +1,10 @@
+from difflib import SequenceMatcher
+
 space_code_point = 96
 
+
+def similarity(a, b):
+    return SequenceMatcher(None, a, b).ratio()
 
 def custom_ord(char):
     if char == ' ':
@@ -34,8 +39,9 @@ def shift_cipher_decrypt(cipher_text, plaintext_dictionary):
     for shift in range(1, 28):
         attempt = decrypt_char(cipher_text, shift)
         for plaintext in dictionary:
-            if attempt == plaintext:
-                return attempt
+            sim = similarity(attempt, plaintext)
+            if sim >= 0.9:
+                return plaintext
 
     return None
 
