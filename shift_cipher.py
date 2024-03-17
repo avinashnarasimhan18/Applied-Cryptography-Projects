@@ -36,11 +36,12 @@ def shift_cipher_decrypt(cipher_text, plaintext_dictionary):
                 (custom_ord(char) - shift_value - space_code_point) % 27 + space_code_point)
         return decrypted_text
 
-    for shift in range(1, 28):
+    for shift in range(0, 27):
         attempt = decrypt_char(cipher_text, shift)
         for plaintext in dictionary:
             sim = similarity(attempt, plaintext)
             if sim >= 0.9:
+                print("Predicted Shift is", shift) # Debugger statement to be removed later
                 return plaintext
 
     return None
