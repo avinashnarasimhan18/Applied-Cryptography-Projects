@@ -1,5 +1,6 @@
 """
-This is a helper code to encrypt plaintext according to the project guidelines. Enter the plaintext and the desired shift. Output is ciphertext.
+This is a helper code to encrypt plaintext according to the project guidelines. Enter the plaintext and the shift. Output is ciphertext.
+This code can be used to generate inputs for the cryptanalysis program.
 """
 
 space_code_point = 96
