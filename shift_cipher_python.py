@@ -43,9 +43,6 @@ def shift_cipher_decrypt(cipher_text, dictionary):
             sim.append(similarity_score)  # Store similarity score with plaintext
         highest_similarity_score = max(sim)
         if highest_similarity_score >= 0.25:
-            print(highest_similarity_score)
-            print(sim)
-            print("Predicted Shift is", shift)  # Debugger statement (To be removed later)
             return dictionary[sim.index(highest_similarity_score)]
         else:
             continue
