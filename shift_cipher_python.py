@@ -37,12 +37,18 @@ def shift_cipher_decrypt(cipher_text, dictionary):
     # Iterate through all possible shift values from 0 to 26
     for shift in range(0, 27):
         attempt = decrypt_char(cipher_text, shift)
-        for plaintext in dictionary:
-            sim = similarity(attempt, plaintext)
-            # If the similarity between the plaintext guess and the plaintext in dictionary is >=90%, return that as the code's guess
-            if sim >= 0.9:
-                print("Predicted Shift is", shift)  # Debugger statement (To be removed later)
-                return plaintext
+        sim = []
+        for index in range(len(dictionary)):
+            similarity_score = similarity(attempt, dictionary[index])
+            sim.append(similarity_score)  # Store similarity score with plaintext
+        highest_similarity_score = max(sim)
+        if highest_similarity_score >= 0.25:
+            print(highest_similarity_score)
+            print(sim)
+            print("Predicted Shift is", shift)  # Debugger statement (To be removed later)
+            return dictionary[sim.index(highest_similarity_score)]
+        else:
+            continue
 
     return None
 
