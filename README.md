@@ -8,20 +8,20 @@ This project involves performing Cryptanalysis of a Class of Ciphers based on Ex
 
 ### Contents
 - **Files**:
-  - `decrypt-source.cpp`: C++ source code for decryption tasks.
-  - `decrypt-binary`: Compiled binary for decryption.
+  - `decrypt-source.cpp`: C++ source code for cryptanalysis.
+  - `decrypt-binary`: Compiled binary for cryptanalysis.
   - `generate_random_plaintexts.py`: Python script for generating random plaintexts.
   - `Project_Report.pdf`: Detailed explanation and findings.
 
 
 ## Project 2
 ### Overview
-This project involves performing Secure Outsourcing of Machine Learning Classification Using Homomorphic Encryption"
+This project involves performing Secure Outsourcing of Machine Learning Classification Using Homomorphic Encryption
 
 ### Contents
 - **Files**:
   - `Project_Presentation.pdf`: Slide deck presenting project highlights.
   - `Project_Design.pdf`: Detailed project design documentation.
-  - `code.py`: Python implementation of cryptographic algorithms.
+  - `code.py`: Python implementation of the algorithm.
   - `Execution_Guide.md`: Instructions for executing the project code.
 
