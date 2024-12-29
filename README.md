@@ -1,7 +1,6 @@
 # Applied Cryptography Projects
 
-This repository contains project details done as part of the Applied Cryptography course at NYU. 
----
+This repository contains details of projects done as part of the Applied Cryptography course at NYU. 
 
 ## Project 1
 ### Overview
@@ -14,7 +13,6 @@ This project involves performing Cryptanalysis of a Class of Ciphers based on Ex
   - `generate_random_plaintexts.py`: Python script for generating random plaintexts.
   - `Project_Report.pdf`: Detailed explanation and findings.
 
----
 
 ## Project 2
 ### Overview
